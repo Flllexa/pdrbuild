@@ -22,8 +22,13 @@
 		position: relative;
 		float:left;
 		padding:3px 20px;
+		color:#fff !important;
 	}
-   
+
+	.ui-footer { 
+		background-color:#fff !important;
+	}
+	
 /* =============================================================================
    Custom content styling
    ========================================================================== */
@@ -165,12 +170,12 @@ hr.ornamental {
 	/* background:url(../img/page-backgrounds/paper.jpg) 0 0; background-size: 500px 593px;  */
 	/* background:url(../img/page-backgrounds/farmer.jpg) 0 0; background-size: 349px 349px; */
 	 /* background:url(../img/page-backgrounds/blue-stripes.jpg) 0 0; background-size: 100px 100px; */
-	 background:url(../img/page-backgrounds/texture.jpg) 0 0; background-size: 476px 476px; 
+	 background: #2d2d2d url(../img/page-backgrounds/texture.jpg) 0 0; background-size: 476px 476px; 
 	/* background:url(../img/page-backgrounds/white-brick-wall.jpg) 0 0; background-size: 25px 17px; */
 	/* background:url(../img/page-backgrounds/grilled.jpg) 0 0; background-size: 170px 180px;  */
 	/* background:url(../img/page-backgrounds/wood.jpg) 0 0; background-size: 203px 317px; */
-	color: #111;
-	text-shadow: 0 1px 0 #fff;
+	color: #ccc;
+	text-shadow: 0 1px 0 #000;
 }
 
 .ui-body-c,
@@ -219,11 +224,11 @@ hr.ornamental {
    ========================================================================== */
 
 .ui-btn-up-c {
-	border: 1px solid #111;
-	background: #0A202B;
+	border: 1px solid #ff6600;
+	background: #cc0000;
 	font-weight: bold;
 	color: #fff !important;
-	text-shadow:  0 1px 1px #111;
+	text-shadow:  0 1px 1px #ff6600;
 }
 
 .ui-btn-up-c a.ui-link-inherit {
@@ -231,11 +236,11 @@ hr.ornamental {
 }
 
 .ui-btn-hover-c {
-	border: 1px solid #000;
-	background: #0C2430;
+	border: 1px solid #ffcc00;
+	background: #ff6600;
 	font-weight: bold;
 	color: #fcd144 !important;
-	text-shadow:  0 1px 1px #000;
+	text-shadow:  0 1px 1px #ffcc00;
 }
 
 .ui-btn-hover-c a.ui-link-inherit {
@@ -262,7 +267,8 @@ hr.ornamental {
 
 .ui-btn-inner {
     border-color: rgba(255, 255, 255, 0.3);
-    border-top: 1px solid #1a3d4f;
+    border-top: 1px solid #f06722;
+	background:#cb2025 !important;
 }
 
 
@@ -338,9 +344,10 @@ h2.pageTitle span {
 
 .logo { 
 	width:231px; 
-	height:50px; 
+	height:41px; 
 	background:url(../img/logo-sm.png) top center no-repeat;  
 	margin:0 auto;  
+
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-resolution:240dpi){
@@ -363,7 +370,7 @@ h1.ui-title {
    Link Bars with Large Arrows
    ========================================================================== */
 
-li .ui-btn-text {background:url(../img/pattern2.png) #0A202B; background-size: 20px 20px;}
+li .ui-btn-text {background-color:#cc0000;}
 
 a.ui-link-inherit {
 	background:url(../img/arrow.png) right no-repeat; 
@@ -380,7 +387,7 @@ a.ui-link-inherit {
 }
 	
 a.ui-link-inherit:hover {
-	background:url(../img/arrow.png) right no-repeat #0C2430;
+	background:url(../img/arrow.png) right no-repeat #ff6600;
 	background-size: 25px 30px;
 	color:#fcd144 !important; 
 }

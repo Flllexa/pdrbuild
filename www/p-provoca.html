@@ -1,27 +1,65 @@
 <!DOCTYPE html> 
 <html> 
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-	<title>PDR - A Ponto de Referência</title> 
-    <script>
-		if (window.screen.height==568) { // iPhone 4"
-		document.querySelector("meta[name=viewport]").content="width=320.1";
-		}
-    </script>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    
-    <!-- css -->
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.css" />
-    <link rel="stylesheet" href="css/style1.css">
+        <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<script>
+			if (window.screen.height==568) { // iPhone 4"
+			document.querySelector("meta[name=viewport]").content="width=320.1";
+			}
+		</script>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.mobile-1.3.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
+		<link rel="stylesheet" type="text/css" href="css/style1.css" />
+        <title>Ponto de Referência</title>
+		
+		<script>
+			
+			function onLoad() {
+				document.addEventListener("deviceready", onDeviceReady, false);
+			}
 
-    <!-- scripts -->
-	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.3.0/jquery.mobile-1.3.0.min.js"></script>
-	<script src="js/screen.js"></script>
-    
-</head>
+			// Cordova is loaded and it is now safe to make calls Cordova methods
+			//
+			function onDeviceReady() {
+				
+			}
+
+			function checkConnection() {
+				var networkState = navigator.network.connection.type;
+
+				var states = {};
+				states[Connection.UNKNOWN]  = 'Por favor, se conecte para acessar esta página.';
+				states[Connection.ETHERNET] = 'Ethernet connection';
+				states[Connection.WIFI]     = 'WiFi connection';
+				states[Connection.CELL_2G]  = 'Cell 2G connection';
+				states[Connection.CELL_3G]  = 'Cell 3G connection';
+				states[Connection.CELL_4G]  = 'Cell 4G connection';
+				states[Connection.NONE]     = 'Por favor, se conecte para acessar esta página.';
+		
+				// document.getElementById ("inputState").value = states[networkState]
+					
+				//alert('Connection type: ' + states[networkState]);
+				
+				if (states[networkState] != "Por favor, se conecte para acessar esta página.") {
+					return false;
+				} else {
+					alert('Erro: ' + states[networkState]);
+					navigator.app.exitApp();
+				}
+				
+				
+			
+			}
+			
+
+		</script>
+    </head>
 <body>
 
 <div data-role="page">
@@ -37,9 +75,7 @@
     <div data-role="content">
     
 		<div class="content-padd">
-			<hr class="ornamental"/>
 				<h3 class="home-title">Palestras de Provocação</h3>
-			<hr class="ornamental"/>
 			<p>Isso provocação.</p>
 
 			<p>Pra quem quer provocar sua equipe através de conceitos fortes e inovadores!</p>
@@ -51,7 +87,7 @@
 			<h4>CLIQUE E CONHEÇA NOSSAS PALESTRAS PRINCIPAIS:</h4>
 			<div style="margin: 0 auto; text-align:center;">
 				<!-- ECOLOGIA EMPRESARIAL -->
-				<div id="pop-eco" data-role="popup" style="background-color:#fff;">
+				<div id="pop-eco" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 					<div data-role="header">
 						<h1>ECOLOGIA EMPRESARIAL</h1>
@@ -78,7 +114,7 @@
 				<a  href="#pop-eco" data-rel="popup" data-transition="pop" ><img  src="img/prods/Palestra_r1_c1O.png" alt="shadow" /></a>
 				
 				<!-- GAS -->
-				<div id="pop-gas" data-role="popup" style="background-color:#fff;">
+				<div id="pop-gas" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 					<div data-role="header">
 						<h1>GAS - GESTÃO DE ATENDIMENTO E SERVIÇOS</h1>
@@ -99,7 +135,7 @@
 				<a  href="#pop-gas" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r1_c2O.png" alt="shadow" /></a>
 				
 				<!-- 3RS -->
-				<div id="pop-3rs" data-role="popup" style="background-color:#fff;">
+				<div id="pop-3rs" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 					<div data-role="header">
 						<h1>OS 3R's DE SUCESSO</h1>
@@ -121,7 +157,7 @@
 				<a  href="#pop-3rs" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r1_c3O.png" alt="shadow" /></a>
 				
 				<!-- SIGNALS -->
-				<div id="pop-signals" data-role="popup" style="background-color:#fff;">
+				<div id="pop-signals" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 					<div data-role="header">
 						<h1>SINAIS DE SUCESSO DO SEU NEGÓCIO</h1>
@@ -144,7 +180,7 @@
 				<div class="clear"></div>
 
 				<!-- DESEQUALIZADOR -->
-				<div id="pop-des" data-role="popup" style="background-color:#fff;">
+				<div id="pop-des" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 				<div data-role="header">
 						<h1>[DES]EQUALIZADOR</h1>
@@ -165,7 +201,7 @@
 				<a  href="#pop-des" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r2_c1O.png" alt="shadow" /></a>
 
 				<!-- BEAT -->
-				<div id="pop-beat" data-role="popup" style="background-color:#fff;">
+				<div id="pop-beat" data-role="popup" style="background-color:#2d2d2d;">
 					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-left">Fechar</a>
 					<div data-role="header">
 						<h1>SERVIÇOS, VENCENDO A CRISE</h1>
@@ -187,7 +223,7 @@
 				<a  href="#pop-beat" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r2_c2O.png" alt="shadow" /></a>
 
 				<!-- CAIA -->
-				<div id="pop-caia" data-role="popup" style="background-color:#fff;">
+				<div id="pop-caia" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>CAIA NA REDE</h1>
 					</div>
@@ -208,7 +244,7 @@
 				<a  href="#pop-caia" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r2_c3O.png" alt="shadow" /></a>
 				
 				<!-- AIDDU -->
-				<div id="pop-aiddu" data-role="popup" style="background-color:#fff;">
+				<div id="pop-aiddu" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>AIDDU - ATITUDE INCRIVELMENTE DIFERENTE DO USUAL</h1>
 					</div>
@@ -230,7 +266,7 @@
 				<div class="clear"></div>
 
 				<!-- magn -->
-				<div id="pop-magn" data-role="popup" style="background-color:#fff;">
+				<div id="pop-magn" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>A LOJA MAGNÉTICA</h1>
 					</div>
@@ -251,7 +287,7 @@
 				<a  href="#pop-magn" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r3_c1O.png" alt="shadow" /></a>
 				
 				<!-- lead -->
-				<div id="pop-lead" data-role="popup" style="background-color:#fff;">
+				<div id="pop-lead" data-role="popup" style="background-color:#2d2d2d;">
 				
 				<div data-role="header">
 					<h1>LIDERANÇA - FATOR DECISIVO PARA AS EMPRESAS DE SUCESSO</h1>
@@ -272,7 +308,7 @@
 				<a  href="#pop-lead" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r3_c2O.png" alt="shadow" /></a>
 				
 				<!-- show -->
-				<div id="pop-show" data-role="popup" style="background-color:#fff;">
+				<div id="pop-show" data-role="popup" style="background-color:#2d2d2d;">
 				<div data-role="header">
 					<h1>TENDÊNCIAS MUNDIAIS EM VAREJO</h1>
 				</div>
@@ -293,7 +329,7 @@
 				<a  href="#pop-show" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r3_c3O.png" alt="shadow" /></a>
 				
 				<!-- live -->
-				<div id="pop-live" data-role="popup" style="background-color:#fff;">
+				<div id="pop-live" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>LOJA VIVA</h1>
 					</div>
@@ -319,7 +355,7 @@
 				<div class="clear"></div>
 				
 				<!-- onoff -->
-				<div id="pop-onoff" data-role="popup" style="background-color:#fff;">
+				<div id="pop-onoff" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>MARKETING ON/OFF</h1>
 					</div>
@@ -343,7 +379,7 @@
 				<a  href="#pop-onoff" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r4_c1O.png" alt="shadow" /></a>
 				
 				<!-- point -->
-				<div id="pop-point" data-role="popup" style="background-color:#fff;">
+				<div id="pop-point" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>PONTO DE REFERÊNCIA - QUER SER UM?</h1>
 					</div>
@@ -365,7 +401,7 @@
 				<a  href="#pop-point" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r4_c2O.png" alt="shadow" /></a>
 				
 				<!-- power -->
-				<div id="pop-power" data-role="popup" style="background-color:#fff;">
+				<div id="pop-power" data-role="popup" style="background-color:#2d2d2d;">
 				<div data-role="header">
 					<h1>A FORÇA DA EQUIPE</h1>
 				</div>
@@ -386,7 +422,7 @@
 				<a  href="#pop-power" data-rel="popup" data-transition="pop"><img  src="img/prods/Palestra_r4_c3O.png" alt="shadow" /></a>
 				
 				<!-- coffee -->
-				<div id="pop-coffee" data-role="popup" style="background-color:#fff;">
+				<div id="pop-coffee" data-role="popup" style="background-color:#2d2d2d;">
 					<div data-role="header">
 						<h1>COFFEE - CALOR HUMANO ESQUENTANDO AS VENDAS</h1>
 					</div>
