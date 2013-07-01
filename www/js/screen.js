@@ -18,7 +18,7 @@ JQTWEET = {
 	
 	// Set twitter username and number of tweets
 	user: 'PReferencia',
-	numTweets: 15,
+	numTweets: 10,
 	appendTo: '#jstwitter',
 
 	// core function of jqtweet

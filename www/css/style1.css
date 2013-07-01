@@ -338,7 +338,7 @@ hr.ornamental {
 
 .ui-btn-inner {
     border-color: rgba(255, 255, 255, 0.3);
-    border-top: 1px solid #f06722;
+	white-space:normal;
 }
 
 
@@ -466,11 +466,12 @@ a.ui-link-inherit:hover {
    ========================================================================== */
    
 .ui-header .ui-title, .ui-footer .ui-title {
-	margin: 0.8em 90px;
+	margin: 0.8em 24px;
+	white-space:normal;
 }
 
 .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
-    padding: .8em 15px;
+    /*padding: .8em 15px;*/
 }
 
 .ui-content {
@@ -540,7 +541,7 @@ li.ui-li-divider  { border:0px }
 }
 	
 .thumbnail-list ul.ui-listview li a.ui-link-inherit { 
-	padding-left: 100px; 
+	padding-left: 4px; 
 }
 
 .thumbnail-list ul.ui-listview .ui-btn-inner { 

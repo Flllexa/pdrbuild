@@ -18,14 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.1.css" />
 		<link rel="stylesheet" type="text/css" href="css/style1.css" />
         <title>Ponto de Referência</title>
-		<!--<script>
-			$( document ).bind( "mobileinit", function() {
-				// Make your jQuery Mobile framework configuration changes here!
-
-				$.mobile.allowCrossDomainPages = true;
-			});
-		</script>-->
-		
+	
 		<script>
 			// Wait for Cordova to load
 			// 
@@ -82,8 +75,12 @@
 				
 			
 			}
-			
+			$( document ).bind( "mobileinit", function() {
+				// Make your jQuery Mobile framework configuration changes here!
 
+				$.mobile.allowCrossDomainPages = true;
+				$.support.cors = true;
+			});
 		</script>
     </head>
 	
@@ -100,7 +97,7 @@
 		</div><!-- /header -->
 
 		<div data-role="content" >
-		<div class="shadow1box"><img src="img/shadow1.png" class="shadow1" alt="shadow"></div>
+		
 			
 				<h3 class="home-title">Quer ser um Ponto de Referência?</h3>
 			
@@ -108,12 +105,13 @@
 				<!-- navigation -->
 				<ul data-role="listview" data-inset="true" id="listview" style="margin-bottom:0px">
 					 
-					<li><a href="#a-ponto" data-transition="slide" >A Ponto de Referência</a></li>
-					<li class="oneTheme"><a href="produtos.html" data-transition="slide" data-prefetch="true" >Produtos</a></li>
-					<li class="twoTheme"><a href="clientes.html" data-transition="slide" data-prefetch="true">Clientes</a></li>
-					<li class="threeTheme"><a href="blogs.html" data-transition="slide" data-prefetch="true">Blogs</a></li>
+					<li><a href="#a-ponto" data-transition="fade" >A Ponto de Referência</a></li>
+					<li class="oneTheme"><a href="#produtos" data-transition="fade" >Produtos</a></li>
+					<li class="twoTheme"><a href="#clientes" data-transition="fade" >Clientes</a></li>
+					<li class="threeTheme"><a href="#blogs" data-transition="fade">Blogs</a></li>
 					<li class="fourTheme"><a id="Elo" href="http://iemobile.com.br/pdr/html/elogios.php" onclick="checkConnection()" rel="external">Enviar um Elogio</a></li>
 					<li class="fiveTheme"><a id="Fal" href="http://iemobile.com.br/pdr/html/contact.php" onclick="checkConnection()" rel="external">Fale Com a Gente!</a></li>
+					
 				</ul>
 				
 				<div class="shadow2box"><img src="img/shadow2.png" class="shadow2" alt="shadow"></div>
@@ -145,17 +143,17 @@
 		<!-- main content -->
 		<div data-role="content">
 		<div data-role="header">
-			<a href="main.html" data-rel="back">Voltar</a>
+			<a href="main.html" data-rel="back">&lt;&lt;&lt;</a>
 			<div class="logo"></div>
 		</div>
-		<div class="shadow1box"><img src="img/shadow1.png" class="shadow1" alt="shadow"></div>
+		<h3 class="home-title">A Ponto de Referência</h3>
 		<div class="content-padd">
-					<h3 class="home-title">A Ponto de Referência</h3>
+					
 		<!-- accordion -->
 		<div data-role="collapsible-set">
 
-			<div data-role="collapsible" data-collapsed="true">
-				<h3>Por que a gente existe?</h3>
+			<div data-role="collapsible" data-collapsed="true" >
+				<h3 onclick="$.mobile.silentScroll(100)">Por que a gente existe?</h3>
 				<p>Na verdade, é um diálogo a 3.</p>
 				<ul>
 					<li>1 Agente de Atendimento</li>
@@ -163,7 +161,7 @@
 					<li>3 A pessoa de quem ele cuida. O Cliente.</li>
 				</ul>
 
-				<p>E para que você tenha um Atendimento nota 1000, tem que cuidar desses 3 diálogos. De todos que constrói a marca até quem está em contato com o Cliente.</p>
+				<p>E para que você tenha um Atendimento nota 1000, tem que cuidar desses 3 diálogos. De todos que constroem a marca até quem está em contato com o Cliente.</p>
 
 				<p>Ativar esse diálogo é um movimento. O movimento GAS.</p>
 
@@ -173,7 +171,7 @@
 			</div>
 			
 			<div data-role="collapsible" >
-				<h3 style="background:#000">O que a gente faz?</h3>
+				<h3 onclick="$.mobile.silentScroll(200)" style="background:#000">O que a gente faz?</h3>
 				<p><b>Há 511 anos 150 milhões </b>de brasileiros <b>reclamam</b> e chiam do <b>atendimento</b> no Brasil. A gente não. Ajudamos a construir uma cultura de Atendimento para transformar sua companhia na melhor do mercado.
 				Atendimento é o único diferencial inimitável que uma companhia consegue ter.</p>
 
@@ -187,7 +185,7 @@
 			</div>
 			
 			<div data-role="collapsible">
-				<h3>O que sua marca ganha com isso?</h3>
+				<h3 onclick="$.mobile.silentScroll(250)">O que sua marca ganha com isso?</h3>
 				<p>Marcas com GAS dão muito lucro. Sabem que <b>gente</b> é o fator mais importante de <b>sucesso</b> e não é da boca pra fora. 
 				Trabalham a Ecologia Empresarial, garantindo um clima na comunidade de servir em que gente, ajuda gente, que ajuda o Cliente. 
 				Fazendo a coisa mais rara em qualquer marca: <b>AIDDU. Atitude Incrivelmente Diferente do Usual</b> que gera <b>Atendimento Incrivelmente Diferente do Usual.</b></p>
@@ -202,7 +200,7 @@
 			</div>
 			
 			<div data-role="collapsible">
-				<h3>Como a gente faz?</h3>
+				<h3 onclick="$.mobile.silentScroll(300)">Como a gente faz?</h3>
 
 				<h4>1 - Ouvir a voz da comunidade de servir</h4>
 				<p>É um diagnóstico para entender o relacionamento com o Cliente e as relações intra e inter-áreas.</p>
@@ -224,21 +222,21 @@
 
 				<h4>5 - Ciclo de aprendizagem e inovação estratégica de atendimento</h4>
 				<p>Consiste no aprofundamento dos temas ligados diretamente a construção de atendimento, serviço e operação. Abordaremos conceitos e ferramentas para compartilhar a nova cultura de atendimento.</p>
-				<p>É feito através de um ciclo de reuniões onde provocaremos os participantes a [re]pensarem sobre o modelo de serviços da sua Marca, o que contribui e o que atrapalha no fortalecimento dessa cultura, em todas as áreas.</p>
+				<p>É feito através de um ciclo de reuniões onde provocaremos os participantes a [re]pensarem sobre o modelo de serviços da sua marca, o que contribui e o que atrapalha no fortalecimento dessa cultura, em todas as áreas.</p>
 				<p>Nivelar e elevar o patamar de conhecimento e desenvolvimento de todos, capacitar os líderes a repassarem os conceitos e ferramentas para suas equipes, construir movimentos de mudança que levarão cada área a cumprir a promessa de atendimentos e serviços que a causa projetou.</p>
 
 				<h4>6 - Sistematizar e [Re]aprender</h4>
 				<p>Toda a implantação das ações da cultura e do aprendizado dos módulos de capacitação será consolidada através do Sistema GAS.</p>
 				<p>O Sistema é focado em patrocinar e gerir as ações que se pretende que ocorram nos pontos de contato com o Cliente, no nível definido nas fases iniciais do projeto.</p>
 				<p>Ele ajuda a capacitar on the job, controlar as implantações de novos procedimentos, implantação de novos conceitos, produtos e inovações.</p>
-				<p>O sistema funciona como e-learning e controle de implantação. Ele é on-line, sem nenhuma necessidade de instalaçãode software, não ocupa espaço no computador local.</p>
+				<p>O sistema funciona como e-learning e controle de implantação. Ele é on-line, sem nenhuma necessidade de instalação de software, não ocupa espaço no computador local.</p>
 
 				<h4>7 - Monitorar Indicadores</h4>
 				<p>Essa fase irá ajudar a eliminar a distância entre conceitos e resultados. Acompanharemos os participantes do projeto no seu dia a dia de trabalho pra medir a evolução de cada um, orientar na implementação das ferramentas e tirar possíveis dúvidas.</p>
 			</div>
 			
 			<div data-role="collapsible">
-				<h3>Depois do Movimento GAS...</h3>
+				<h3 onclick="$.mobile.silentScroll(350)">Depois do Movimento GAS...</h3>
 				<p>Marcas com GAS conseguem:</p>
 				<p>Garantir que a marca entregue a promessa que ele representa. Em cada e todos os momentos. Ser tão competente para que o Cliente <strong>prefira</strong> seus produtos e serviços. E ache que vale a pena pagar mais do que ele paga para a concorrência <strong>sempre!</strong> Vale para os donos, vale para as equipes, vale para as comunidades de servir.</p>
 				<p>O movimento GAS vai levar a ação da sua marca a um patamar de Atendimento nunca antes imaginado. Afinal, todo mundo quer melhorar o valor da ação da sua marca.</p>
@@ -247,24 +245,25 @@
 				<p>Aí todos fazem o que é bom para a marca sem ninguém ter que ficar olhando ou mandando. Sonho? Nada! O <strong>Movimento GAS</strong> faz isso. Tudo começa pelo líder que inspira.</p>
 			</div>
 			<div data-role="collapsible">
-				<h3>Equipe</h3>
+				<h3 onclick="$.mobile.silentScroll(400)">Equipe</h3>
 				<p>São mais 40 profissionais por todo Brasil, com muita experiência em varejo e serviços. Gente generosa, entusiasmada e com muita pegada!</p>
-				<img style="float:left;" src="img/equipe/edmour3O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/paulo1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/araripe1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/bavelloni1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/fabiana1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/azevedo2O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/sigfredo1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/pontalti1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/fred1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/gustavo1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/assis3O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/luciana1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/oca2O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/solange3O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/rene1O.jpg" alt="shadow" />
-				<img style="float:left;" src="img/equipe/perrella1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/edmour3O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/paulo1O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/araripe1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/bavelloni1O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/fabiana1O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/sigfredo1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/azevedo2O.jpg" alt="shadow" />
+				
+				<img style="float:left; width:50%;" src="img/equipe/pontalti1O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/fred1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/gustavo1O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/assis3O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/luciana1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/oca2O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/solange3O.jpg" alt="shadow" />
+				<img style="float:left; width:50%;" src="img/equipe/rene1O.jpg" alt="shadow" />
+				<img style="float:left; width:100%;" src="img/equipe/perrella1O.jpg" alt="shadow" />
 			</div>
 		
 		</div>
@@ -289,7 +288,205 @@
 
 		
 	</div><!-- /page -->
-	<!-- page a ponto -->
+	<!-- /page a ponto -->
+	<!-- page produtos -->
+	
+	<div data-role="page" id="produtos">
+    
+		<!-- header -->
+		<div data-role="header">
+			<a href="main.html" data-rel="back">&lt;&lt;&lt;</a>
+			<div class="logo"></div>
+		</div>
+		<!--/header -->
+		
+		<!-- main content -->
+		<div data-role="content">
+		<h3 class="home-title">Produtos</h3>
+		<div class="content-padd">
+					
+			<p>Nessa altura do campeonato, você já está convencido de que atendimento é um grande diferencial.</p>
+
+			<p>Normalmente vem a dúvida: Como implementar tudo isso e mudar o atendimento e o serviço na sua vida e na sua companhia?</p>
+
+			<p>Os produtos que desenvolvemos têm essa competência: transformar vontade estratégica de se diferenciar em atendimento, em ação no dia a dia. Juntando a sua vontade estratégica com os nossos produtos, você irá transformar a sua companhia.</p>
+
+			<p>A gente criou produtos de acordo com o tamanho do seu bolso. Você escolhe de que maneira quer trabalhar com a Ponto de Referência.</p>
+			<ul>
+				<li>Palestras de Provocação</li>
+				<li>Oficina de Ativação</li>
+				<li>Projeto GAS</li>
+			</ul>
+			</br><p></p></br>
+			<div class="thumbnail-list">        
+				
+				<ul data-filter-placeholder="Buscar..." data-filter="false" data-role="listview" data-filter-theme="d" >
+
+					<li class="ui-btn-icon-right"> 
+						<div class="ui-btn-inner ui-li oneTheme" aria-hidden="true">
+							<div class="ui-btn-text">
+								<a class="ui-link-inherit" href="p-provoca.html" data-transition="slide" data-prefetch="true">
+									
+										<h3 class="ui-li-heading">Palestras de Provocação</h3>
+											<p class="ui-li-desc">Isso é Provocação</p>
+								</a>
+							</div>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+					</li>
+
+					<li class="ui-btn-icon-right">
+						<div class="ui-btn-inner ui-li oneTheme" aria-hidden="true">
+							<div class="ui-btn-text">
+								<a class="ui-link-inherit" href="p-ativa.html" data-transition="slide" data-prefetch="true">
+									
+										<h3 class="ui-li-heading">Oficina de Ativação</h3>
+											<p class="ui-li-desc">Solicite uma proposta</p>
+										</a>				</div>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+					</li>
+
+					<li class="ui-btn-icon-right">
+						<div class="ui-btn-inner ui-li oneTheme" aria-hidden="true">
+							<div class="ui-btn-text">
+								<a class="ui-link-inherit" href="p-projeta.html" data-transition="slide" data-prefetch="true">
+									
+										<h3 class="ui-li-heading">Projeto GAS</h3>
+											<p class="ui-li-desc">Ir mais longe e ser referência</p>
+								</a>				</div>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+					</li>
+
+					<li class="ui-btn-icon-right">
+						<div class="ui-btn-inner ui-li oneTheme" aria-hidden="true">
+							<div class="ui-btn-text">
+								<a class="ui-link-inherit" href="p-sistema.html" data-transition="slide" data-prefetch="true">
+									
+										<h3 class="ui-li-heading">Caixa de Ferramentas PR</h3>
+											<p class="ui-li-desc">Gestão estratégica de atendimento</p>
+								</a>				</div>
+						<span class="ui-icon ui-icon-arrow-r ui-icon-shadow"></span>			</div>
+					</li>
+
+				</ul>
+				
+
+			</div>
+		 
+		</div><!-- /content padd -->
+		</div><!-- /content -->
+		
+		<!-- footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="custom-icons">
+					<ul>
+						<li><a href="main.html" id="home2" rel="external" data-icon="custom" data-theme="b">Home</a></li>
+						<li><a href="http://goo.gl/maps/oMCPb" target="_blank" id="map" rel="external" data-icon="custom" data-theme="b">Direções</a></li>
+						<li><a href="tel:2122663533" id="cell" rel="external" data-icon="custom" data-theme="b">Falando</a></li>
+						<li><a href="produtos.html" id="presentation" rel="external" data-icon="custom" data-theme="b" data-ajax="false">Produtos</a></li>
+						<li><a href="twitter.html" id="twitter" rel="external" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
+					</ul>
+				</div>
+			   
+			</div>
+			<!-- /footer -->
+
+		
+	</div><!-- /page -->
+	
+	<!-- /page produtos -->
+	<!-- page blogs -->
+	<div data-role="page" id="blogs" >
+
+		<div data-role="header">
+			<a href="main.html" rel="external">&lt;&lt;&lt;</a>
+			<div class="logo"></div>
+		</div><!-- /header -->
+
+		<div data-role="content" >
+		
+				<h3 class="home-title">Blogs que são Ponto de Referência</h3>
+			<div class="content-padd">
+				<!-- navigation -->
+				<ul data-role="listview" data-inset="true" id="listview" style="margin-bottom:0px">
+					<li class="threeTheme"><a href="blog-oca.html" rel="external">Oca Bertaso</a></li>
+					<li class="threeTheme"><a href="blog-edmour.html" rel="external">Edmour Saiani</a></li>
+					<li class="threeTheme"><a href="blog-fred.html" rel="external">Fred Alecrim</a></li>
+					<li class="threeTheme"><a href="blog-sig.html" rel="external">Blog do Sigefredo</a></li>
+					<li class="threeTheme"><a href="blog-elo.html" rel="external">Elogios por Dia</a></li>
+				</ul>
+				<div class="shadow2box"><img src="img/shadow2.png" class="shadow2" alt="shadow"></div>
+				<!-- /navigation -->
+			</div>
+		</div><!-- /content -->
+
+		<!-- footer -->
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" class="custom-icons">
+				<ul>
+					<li><a href="main.html" id="home2" rel="external" data-icon="custom" data-theme="b">Home</a></li>
+					<li><a href="http://goo.gl/maps/oMCPb" id="map" data-icon="custom" data-theme="b">Direções</a></li>
+					<li><a href="tel:2122663533" id="cell" data-icon="custom" data-theme="b">Falando</a></li>
+					<li><a href="produtos.html" id="presentation" data-icon="custom" data-theme="b" data-ajax="false">Produtos</a></li>
+					<li><a href="twitter.html" id="twitter" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
+				</ul>
+			</div>
+		   
+		</div>
+		<!-- /footer -->
+	</div><!-- /page one -->
+	<!-- /page blogs -->
+	
+	<!-- page clientes -->
+	<div data-role="page" id="clientes">
+		
+		<!-- header -->
+		<div data-role="header">
+			<a href="produtos.html" data-rel="back">&lt;&lt;&lt;</a>
+			<div class="logo"></div>
+		</div>
+		<!--/header -->
+		
+		<!-- main content -->
+		<div data-role="content">
+	   <h3 class="home-title">Clientes</h3>
+				<p>Alguns de nossos clientes.</p>
+		<div class="content-padd">
+				
+			<div class="clientes">
+				<img src="img/logos/spoleto.jpg" style="width:100%" alt="" />
+				<img src="img/logos/oi.jpg" style="width:100%" alt="" />
+				<img src="img/logos/alshop.jpg" style="width:100%" alt="" />
+				<img src="img/logos/cinemark.jpg" style="width:100%" alt="" />
+				<img src="img/logos/farm.jpg" style="width:100%" alt="" />
+				<img src="img/logos/tvglobo.jpg" style="width:100%" alt="" />
+				<img src="img/logos/petrobras.jpg" style="width:100%" alt="" />
+				<img src="img/logos/mapfre.jpg" style="width:100%" alt="" />
+				<img src="img/logos/hospitalcopa.jpg" style="width:100%" alt="" />
+				<img src="img/logos/grupopao.jpg" style="width:100%" alt="" />
+				<img src="img/logos/cna.jpg" style="width:100%" alt="" />
+			</div>
+		</div><!-- /content padd -->
+		</div><!-- /content -->
+		
+			<!-- footer -->
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar" class="custom-icons">
+					<ul>
+						<li><a href="main.html" id="home2" rel="external" data-icon="custom" data-theme="b">Home</a></li>
+						<li><a href="http://goo.gl/maps/oMCPb" target="_blank" id="map" rel="external" data-icon="custom" data-theme="b">Direções</a></li>
+						<li><a href="tel:2122663533" id="cell" rel="external" data-icon="custom" data-theme="b">Falando</a></li>
+						<li><a href="produtos.html" id="presentation" rel="external" data-icon="custom" data-theme="b" data-ajax="false">Produtos</a></li>
+						<li><a href="twitter.html" id="twitter" rel="external" data-icon="custom" data-theme="b" data-ajax="false">Tweets</a></li>
+					</ul>
+				</div>
+			   
+			</div>
+			<!-- /footer -->
+
+		
+	</div><!-- /page -->
+	<!-- /page clientes -->
+	
         <script type="text/javascript" src="cordova-2.6.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
