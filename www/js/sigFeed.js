@@ -17,7 +17,7 @@ $(".contentLink").live("click", function() {
 function renderEntries(entries) {
     var s = '';
     $.each(entries, function(i, v) {
-        s += '<li class="threeTheme"><a href="#contentPage" data-transition="slide" class="contentLink" data-entryid="'+i+'">' + v.title + '<p>' + v.contentSnippet + '</p></a></li>';
+        s += '<li class="threeTheme"><a href="#contentPage"  class="contentLink" data-entryid="'+i+'">' + v.title + '<p>' + v.contentSnippet + '</p></a></li>';
     });
     $("#listview").html(s);
     $("#listview").listview("refresh");

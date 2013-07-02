@@ -43,7 +43,7 @@ h3.home-title {
 	/* font-family: 'Lobster', cursive; font-size:28px; */
 	/* font-family: 'Cabin', sans-serif; font-weight: 700; font-size:22px; */
  	/* font-family: 'Cardo', serif; font-size:24px; */
- 	font-family: 'Droid Sans', sans-serif; font-size:22px; font-weight:700  
+ 	font-family: 'motiva_sansbold'; font-size:22px; font-weight:700  
 }
 
 .padd {
@@ -189,7 +189,7 @@ hr.ornamental {
 	/* font-family: 'Goudy Bookletter 1911', serif; */
  	/* font-family: 'Crimson Text', serif; */
  	 /* font-family: 'Cardo', serif; */
-	  font-family: 'Droid Sans', sans-serif; 
+	  font-family: 'motiva_sansbold';
 }
 
 
@@ -227,6 +227,7 @@ hr.ornamental {
 	border: 1px solid #FF0000 /*{a-bup-border}*/;
 	background: #cc0000 /*{a-bup-background-color}*/;
 	font-weight: bold;
+	font-family: 'motiva_sansbold';
 	color: #ffffff /*{a-bup-color}*/;
 	text-shadow: 0 /*{a-bup-shadow-x}*/ 1px /*{a-bup-shadow-y}*/ 0 /*{a-bup-shadow-radius}*/ #444444 /*{a-bup-shadow-color}*/;
 	background-image: -webkit-gradient(linear, left top, left bottom, from( #e00000 /*{a-bup-background-start}*/), to( #b70000 /*{a-bup-background-end}*/)); /* Saf4+, Chrome */
@@ -475,7 +476,7 @@ a.ui-link-inherit:hover {
 }
 
 .ui-content {
-	padding-top:0px
+	padding-top:50px !important;
 }
 
 .page-header .ui-icon {
@@ -655,7 +656,7 @@ li.ui-li-divider {
 	/* font-family: 'Goudy Bookletter 1911', serif; */
  	/* font-family: 'Crimson Text', serif; */
  	/*  font-family: 'Cardo', serif; */
-	 font-family: 'Droid Sans', sans-serif; 
+	font-family: 'motiva_sansbold';
 	 
 	text-decoration: none;
 }
