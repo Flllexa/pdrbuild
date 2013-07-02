@@ -219,19 +219,6 @@ hr.ornamental {
 }
 
 
-#page_loading
-{
-	background-color:#fff;
-	width:100%;
-	height:100%;
-	position:fixed;
-	z-index:1000000000;
-}
-#main, body {
--webkit-transform-style: flat;
--webkit-backface-visibility: hidden;
--webkit-perspective: 800;
-}
 /* =============================================================================
    Button Styles
    ========================================================================== */
@@ -1216,7 +1203,7 @@ ul.tweetList{
    jQuery Mobile 1.3 Edits
    ========================================================================== */
 .ui-content { padding:0 }
-.content-padd { padding:15px }
+.content-padd { padding:15px; }
 .ui-body-c, .ui-dialog.ui-overlay-c { border:0px !important }
 .ui-li { overflow:hidden !important }
 .ui-panel-inner { padding:0 }
