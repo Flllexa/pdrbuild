@@ -219,6 +219,19 @@ hr.ornamental {
 }
 
 
+#page_loading
+{
+	background-color:#fff;
+	width:100%;
+	height:100%;
+	position:fixed;
+	z-index:1000000000;
+}
+#main, body {
+-webkit-transform-style: flat;
+-webkit-backface-visibility: hidden;
+-webkit-perspective: 800;
+}
 /* =============================================================================
    Button Styles
    ========================================================================== */
@@ -1064,7 +1077,7 @@ ul.tweetList{
 .camera_loader {
     background: #fff url(../img/camera-loader.gif) no-repeat center;
 	background: rgba(255, 255, 255, 0.9) url(../img/camera-loader.gif) no-repeat center;
-	border: 1px solid #ffffff;
+	border: 1px solid #ccc;
 	-webkit-border-radius: 18px;
 	-moz-border-radius: 18px;
 	border-radius: 18px;
