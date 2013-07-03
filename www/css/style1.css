@@ -302,6 +302,11 @@ hr.ornamental {
 	background-image:      -o-linear-gradient( #fcca0a /*{a-bup-background-start}*/, #deb103 /*{a-bup-background-end}*/); /* Opera 11.10+ */
 	background-image:         linear-gradient( #fcca0a /*{a-bup-background-start}*/, #deb103 /*{a-bup-background-end}*/);
 }
+.ui-li .ui-btn-text a.ui-link-inherit{
+text-overflow: ellipsis !important;
+overflow: hidden !important;
+white-space: nowrap !important;
+}
 .ui-btn-up-c a.ui-link-inherit {
 	color: #fff;
 }
